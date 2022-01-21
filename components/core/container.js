@@ -28,8 +28,8 @@ sm:grid-cols-2
             place-items-center
             border-8
             border-zinc-200
-            shadow-2xl
-            shadow-gray-300
+            shadow-xl
+            shadow-gray-200
             hover:scale-105
             ease-in
             active:scale-90
