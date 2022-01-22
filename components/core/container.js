@@ -51,7 +51,7 @@ sm:grid-cols-2
                     setSong(index) 
                     setContextSong(index+1) }}
                  className='bg-white 
-                 text-purple-800
+                 text-blue-500
                  rounded-full
                   w-10 h-10 
                   grid
@@ -61,7 +61,7 @@ sm:grid-cols-2
                    ease-in-out
                    active:scale-90
                    duration-300
-                   shadow-gray-700
+                   shadow-gray-800
                    '>
                 {index===song&&pause?
                 <PauseIcon   
