@@ -19,7 +19,7 @@ export      default function    Footer(){
     },[width,setWidth])
     const PrettoSlider = styled(Slider)({
         color: '#3d3d3d',
-        
+       width:300,
         height: 2,
         '& .MuiSlider-track': {
           border: 'none'
@@ -94,7 +94,7 @@ ${width<700&&'self-start'}
     self-center
     text-lg text-gray-600"/>
     <PrettoSlider
-    className="w-20"
+    className="max-w-sm"
         valueLabelDisplay="auto"
         aria-label="pretto slider"
         defaultValue={20}

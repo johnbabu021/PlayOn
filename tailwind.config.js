@@ -7,6 +7,9 @@ module.exports = {
 
   ],
   theme: {
+    maxWidth:{
+sm:'100px'
+    },
     extend: {},
   },
   plugins: [],
