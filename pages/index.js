@@ -1,21 +1,25 @@
-
-import { useEffect } from 'react'
+import { useContext, useEffect } from 'react'
 import Container from '../components/core/container'
 import Header from '../components/utils/header'
 import  Footer  from '../components/utils/footer'
+import  { SongItems } from '../hooks/context/songContext'
+
 export default function Home() {
+  const {songContext}=useContext(SongItems)
   // console.log(process.env.DB_HOST)
  useEffect(()=>{
    document.title='playon - web music player'
  })
   return (
-    <div  >
+   
+      <div  >
      
 
-<Header/>
-<Container/>
-<Footer/>
-    </div>
+     <Header/>
+     <Container/>
+     { songContext?<Footer/>:null}
+     
+         </div>
+   
   )
 }
-

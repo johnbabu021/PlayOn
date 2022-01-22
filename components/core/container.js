@@ -1,9 +1,14 @@
-import { useEffect, useState } from 'react'
+import {  useContext, useState } from 'react'
 import  Songs   from        '../../constants/main.json'
 import PlayArrowIcon from '@mui/icons-material/PlayArrow';
-export  default function    Container(){
+import PauseIcon from '@mui/icons-material/Pause';
+import { SongItems } from '../../hooks/context/songContext';
 
+export  default function    Container(){
+    
+const   {setContextSong}=useContext(SongItems)
     const   [song,setSong]=useState('')
+    const   [pause,setPause]=useState(true)
     
     return  (
 <section   
@@ -33,7 +38,6 @@ sm:grid-cols-2
             hover:scale-105
             ease-in
             active:scale-90
-            
             duration-300
             
             ${song===index&&'    active:border-8    border-blue-400'}
@@ -43,7 +47,9 @@ sm:grid-cols-2
                 className='grid place-items-center'
                 >
                 
-                <div    onClick={()=>{setSong(index)}}
+                <div    onClick={()=>{
+                    setSong(index) 
+                    setContextSong(index+1) }}
                  className='bg-white 
                  text-purple-800
                  rounded-full
@@ -57,7 +63,11 @@ sm:grid-cols-2
                    duration-300
                    shadow-gray-700
                    '>
-                <PlayArrowIcon />
+                {index===song&&pause?
+                <PauseIcon   
+                 onClick={()=>{setPause(false)}}/>:
+                <PlayArrowIcon 
+                onClick={()=>setPause(true)} />}
                     </div>
                 </div>
             
