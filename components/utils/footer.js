@@ -80,7 +80,7 @@ export      default function    Footer(){
                <PrettoSlider
     className={`${width<700?'w-40':"w-60 "} `}
         aria-label="pretto slider"
-        defaultValue={20}
+        
       /></section>
             
 <div    className={`
