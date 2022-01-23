@@ -35,3 +35,12 @@
 - Minimalistic
 - Ad-free
 - Dark Mode
+
+
+
+## Built With
+
+- [NextJS](https://nextjs.org/docs/getting-started)
+- [Tailwindcss](https://tailwindcss.com/docs)
+- [Web Audio Api](https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API)
+- [Figma](https://www.figma.com/file/WZUT5BwGLGazWKT2thMmZT/playon)
