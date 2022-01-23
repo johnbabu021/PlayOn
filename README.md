@@ -1,12 +1,17 @@
-<h1 align="center">PlayOn-web Music Player</h1>
-
-
 <p  align="center"><img src="https://github.com/johnbabu021/PlayOn/blob/master/public/assets/images/playon.svg"  width="200px" height="200px"/></p>
 
+<h1 align="center">PlayOn
+
+### web Music Player  
+</h1>
+
+<p  align="center">
 <img src="https://github.com/johnbabu021/PlayOn/blob/master/public/assets/images/Intro.png"/>
+
 
 [view demo](https://play-on.vercel.app)
 
+</p>
 <br/>
 
 
