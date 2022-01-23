@@ -6,13 +6,14 @@ import PauseIcon from '@mui/icons-material/Pause';
 import { SongItems } from '../../hooks/context/songContext';
 import      Havana from '../../songs/havana.mp3'
 
- function    Container(){
+export  default  function    Container(){
     
 const   {setContextSong}=useContext(SongItems)
     const   [song,setSong]=useState('')
     const   [pause,setPause]=useState(true)
     
 if(typeof window!=='undefined'&&document!=='undefined'){
+
     const   AudioContext=window.AudioContext||window.webkitAudioContext
 
     const    audioContext=new   AudioContext()
@@ -113,8 +114,7 @@ sm:grid-cols-2
                 }
                 
                 } />}
-                <audio  preload='none' loop src={Havana}></audio>
-                    </div>
+<audio  preload='none' loop src={Havana}></audio>                  </div>
                 </div>
             
             </div>
@@ -128,4 +128,4 @@ sm:grid-cols-2
     )
 }
 
-export  default React.memo(Container)
+// export  default React.memo(Container)
