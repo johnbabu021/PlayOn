@@ -1,10 +1,10 @@
+import  React   from    'react'
 import {  useContext, useState } from 'react'
 import  Songs   from        '../../constants/main.json'
 import PlayArrowIcon from '@mui/icons-material/PlayArrow';
 import PauseIcon from '@mui/icons-material/Pause';
 import { SongItems } from '../../hooks/context/songContext';
-import      Havana from '../../songs/havana.mp3'
-export  default function    Container(){
+ function    Container({Havana}){
     
 const   {setContextSong}=useContext(SongItems)
     const   [song,setSong]=useState('')
@@ -111,7 +111,7 @@ sm:grid-cols-2
                 }
                 
                 } />}
-                <audio  src={Havana}></audio>
+                <audio  preload='none' loop src={Havana}></audio>
                     </div>
                 </div>
             
@@ -125,3 +125,5 @@ sm:grid-cols-2
 </section>
     )
 }
+
+export  default React.memo(Container)

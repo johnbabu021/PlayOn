@@ -1,6 +1,8 @@
 // import { useContext } from "react"
 // import SongContext, { SongItems } from "../../hooks/context/songContext"
 
+import Image from "next/image";
+
 
 
 export  default function    Header(){
@@ -10,7 +12,7 @@ export  default function    Header(){
         <div    className="flex items-center  h-20 mb-4  shadow-xl shadow-gray-200 backdrop-blur-sm sticky top-0 z-10">
 
 <h1 className='pl-8 text-2xl text-gray-600 w-40 flex justify-between items-center '>
-  <img src="/assets/images/playon.svg" className="w-8 h-8"/>
+  <Image src="/assets/images/playon.svg"  width="80px" height="80px"  alt=""/>
   PlayOn
 </h1>   
         </div>
