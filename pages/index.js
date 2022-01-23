@@ -3,6 +3,7 @@ import Container from '../components/core/container'
 import Header from '../components/utils/header'
 import  Footer  from '../components/utils/footer'
 import  { SongItems } from '../hooks/context/songContext'
+import Head from 'next/head'
 
 export default function Home() {
   const {songContext}=useContext(SongItems)
@@ -14,7 +15,9 @@ export default function Home() {
    
       <div  >
      
-
+<Head>
+<link rel="shortcut icon" href="/assets/images/playon.svg"/>
+</Head>
      <Header/>
      <Container/>
      { songContext?<Footer/>:null}
