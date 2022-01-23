@@ -3,13 +3,40 @@ import  Songs   from        '../../constants/main.json'
 import PlayArrowIcon from '@mui/icons-material/PlayArrow';
 import PauseIcon from '@mui/icons-material/Pause';
 import { SongItems } from '../../hooks/context/songContext';
-
+import      Havana from '../../songs/havana.mp3'
 export  default function    Container(){
     
 const   {setContextSong}=useContext(SongItems)
     const   [song,setSong]=useState('')
     const   [pause,setPause]=useState(true)
     
+if(typeof window!=='undefined'&&document!=='undefined'){
+    const   AudioContext=window.AudioContext||window.webkitAudioContext
+
+    const    audioContext=new   AudioContext()
+    // console.log(audioContext.state)
+    audioContext.resume()
+    const       audioElement=document.querySelector('audio')
+    // console.log(audioElement)
+   
+    // audioElement.pause()
+
+// const   track=audioContext.createMediaElementSource(audioElement)
+// const   gainNode=audioContext.createGain();
+
+// const   volumeControl=document.querySelector('#volume')
+// volumeControl.addEventListener('input',()=>{
+//     console.log(this.value  )
+//     gainNode.gain.value=this.value
+// },false)
+
+
+
+// track.connect(audioContext.destination)
+
+}
+
+
     return  (
 <section   
  className="grid 
@@ -20,7 +47,10 @@ sm:grid-cols-2
  ">
 {
     Songs?.map((item,index)=>(
+
            <div  key={index}   className='grid place-items-center gap-4'>
+                   {/* <input  type="range"    id="volume" min="0" max="2" value="1"   step="0.01"/> */}
+
                 <div   className={
                     `
                     
@@ -65,9 +95,23 @@ sm:grid-cols-2
                    '>
                 {index===song&&pause?
                 <PauseIcon   
-                 onClick={()=>{setPause(false)}}/>:
+                 onClick={()=>{
+                    // if(audioContext.state ){
+                        audioElement.pause()
+                    
+                    setPause(false)}}/>:
                 <PlayArrowIcon 
-                onClick={()=>setPause(true)} />}
+                onClick={()=>{
+
+                    // if(audioContext.state==='suspended'){
+                        // audioContext.resume()
+                        audioElement.play()
+                
+                setPause(true)
+                }
+                
+                } />}
+                <audio  src={Havana}></audio>
                     </div>
                 </div>
             
