@@ -2,7 +2,10 @@
 
 <h1 align="center">PlayOn
 
-### web Music Player  
+<p  align="center">
+
+### web Music Player 
+</p> 
 </h1>
 
 <p  align="center">
@@ -31,4 +34,4 @@
 - Self Hosting
 - Minimalistic
 - Ad-free
-### Dark Mode
+- Dark Mode
