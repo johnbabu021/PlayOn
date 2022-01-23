@@ -2,11 +2,13 @@
 
 
 <p  align="center"><img src="https://github.com/johnbabu021/PlayOn/blob/master/public/assets/images/playon.svg"  width="200px" height="200px"/></p>
-<br/>
-<p><img src="https://github.com/johnbabu021/PlayOn/blob/master/public/assets/images/Intro.png" width="500px" height="500px"/>
+
+<img src="https://github.com/johnbabu021/PlayOn/blob/master/public/assets/images/Intro.png"/>
 
 [view demo](https://play-on.vercel.app)
-</p>
+
+<br/>
+
 
 ## Introducing PlayOn
 
