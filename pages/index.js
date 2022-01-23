@@ -4,9 +4,8 @@ import Header from '../components/utils/header'
 import  Footer  from '../components/utils/footer'
 import  { SongItems } from '../hooks/context/songContext'
 import Head from 'next/head'
-import      Havana from '../songs/havana.mp3'
 
-export default function Home({Havana}) {
+export default function Home() {
   const {songContext}=useContext(SongItems)
   // console.log(process.env.DB_HOST)
  useEffect(()=>{
@@ -20,19 +19,10 @@ export default function Home({Havana}) {
 <link rel="shortcut icon" href="/assets/images/playon.svg"/>
 </Head>
      <Header/>
-     <Container Havana={Havana} />
+     <Container/>
      { songContext?<Footer/>:null}
      
          </div>
    
   )
 }
-
-export async  function  getStaticProps(){
-  return{
-    props:{
-Havana
-    }
-  }
-}
-
